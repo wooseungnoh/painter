@@ -1,0 +1,65 @@
+@import './reset.css';
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.canvas_container {
+  width: 700px;
+  height: 700px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 18px 18px 25px #00000057, -18px -18px 25px #ffffff;
+}
+
+.palette {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: url('./img/palette.svg');
+  background-size: cover;
+  border-radius: 50%;
+  top: -80px;
+  box-shadow: 8px 8px 10px #00000075, -8px -8px 10px #fff;
+}
+.colors {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 100px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.palette:hover .colors {
+  opacity: 1;
+  top: -50px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.strokeWidth {
+  position: absolute;
+  top:100px
+}
+
+.strokeWidth::-webkit-slider-runnable-track {
+  background:#000;
+  height:5px;
+}
+.strokeWidth::-webkit-slider-thumb {
+  background:#000;
+  height:5px;
+  margin-top: -5px;
+}
